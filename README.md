@@ -18,3 +18,9 @@ Mac 安装FFmpeg：`brew install ffmpeg`；其它平台请编译[官网](http://
 
 运行`segment.py`，使用方法请见文件头注释。
 
+## 语音识别
+
+### 百度
+
+`pip3 install baidu-aip`
+
