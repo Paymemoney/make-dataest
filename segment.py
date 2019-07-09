@@ -1,3 +1,12 @@
+#!/usr/local/bin python3
+# coding: utf-8
+
+# You need to change the .txt directory in function load_filenames
+# What's in the .txt:
+# <id of audio1> | <filename of audio1>
+# <id of audio2> | <filename of audio2>
+# How to name the .txt: the source of the audios
+
 import argparse
 from collections import OrderedDict
 import librosa
@@ -93,7 +102,7 @@ def find_segments(wav, sample_rate, min_duration, max_duration, max_gap_duration
 
 def load_filenames(source_name):
   mappings = OrderedDict()
-  with open(os.path.join('C:/Users/pulpfiction/Desktop/work/srtp/语音合成/程序/文本', source_name + '.txt'), encoding = 'utf-8') as f:
+  with open(os.path.join('./', source_name + '.txt'), encoding = 'utf-8') as f:
     for line in f:
       file_id, url = line.strip().split('|')
       mappings[file_id] = os.path.basename(url)
@@ -144,8 +153,8 @@ def build_segments(args):
 
 def main():
   parser = argparse.ArgumentParser()
-  parser.add_argument('--base_dir', default='C:/Users/pulpfiction/Documents/CNTV/Download/新闻联播/3.acc')
-  parser.add_argument('--source', default='FM', help='Name of the source to process')
+  parser.add_argument('--base_dir', default='./Voice')
+  parser.add_argument('--source', default='xwlb', help='Name of the source to process')
   parser.add_argument('--min_duration', type=float, default=1.0, help='In seconds')
   parser.add_argument('--max_duration', type=float, default=10.0, help='In seconds')
   parser.add_argument('--max_gap_duration', type=float, default=0.75, help='In seconds')
