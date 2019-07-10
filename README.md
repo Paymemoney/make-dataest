@@ -6,7 +6,7 @@
 
 下载新闻联播视频方式：Windowns或Mac平台的[央视影音](http://app.cctv.com/appkhdxz/pc/index.shtml)软件
 
-下载新闻联播文字稿方式：[新闻联播文字稿](www.xwlbo.com)。
+下载新闻联播文字稿方式：[新闻联播文字稿](http://www.xwlbo.com)。
 
 ## 从视频中提取音频
 
@@ -24,3 +24,8 @@ Mac 安装FFmpeg：`brew install ffmpeg`；其它平台请编译[官网](http://
 
 `pip3 install baidu-aip`
 
+运行`os_test.py`
+
+### 讯飞
+
+直接上传至在线识别
